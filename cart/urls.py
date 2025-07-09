@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import CartListCreateView,CartUpdateView,CartDeleteView
 
 urlpatterns = [
+    path('',CartListCreateView.as_view()),
+    path('update/<int:pk>/',CartUpdateView.as_view()),
+    path('delete/<int:pk>/',CartDeleteView.as_view())
 
 ]

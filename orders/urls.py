@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import PlaceOrderView,UserOrderListView
 
 urlpatterns = [
+    path('place/',PlaceOrderView.as_view()),
+    path('my/',UserOrderListView.as_view())
 
 ]
